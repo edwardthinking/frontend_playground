@@ -1,0 +1,23 @@
+<<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Process Control</title>
+<script type="text/javascript">
+    var arr = [ ["A","f","21","G1"],  // student_name:  ABCD 
+                ["B","f","23","G1"],  // "f" means "famale", "m" means "male"
+                ["C","m","24","G4"],  // number means age
+                ["D","f","21","G1"] ]; // "G" means Grade    
+    var n=0;
+    var len= arr.length;
+    for (var i=0;i<len;i++){
+               if (arr[i][1] == "f" && arr[i][3]== "G1"){
+                    n++;
+               }
+    }    
+    document.write(n);
+</script>
+</head>
+<body>
+</body>
+</html>
