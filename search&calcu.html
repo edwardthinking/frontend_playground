@@ -1,0 +1,56 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系好安全带,准备启航</title>
+
+<script type="text/javascript">
+
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var date = new Date();
+        year = date.getFullYear();
+        month = date.getMonth()+1;
+        day = date.getDate();
+        week = ["Sun","Mon","Thu","Wed","Tus","Fri","Sat"];
+        
+    /*switch (month){
+        case 0: month = 1; break;
+        case 1: month = 2; break;
+        case 2: month = 3; break;
+        case 3: month = 4; break;
+        case 4: month = 5; break;              // too much :aborted
+        case 5: month = 6; break;
+        case 6: month = 7; break;
+        case 7: month = 8; break;
+        case 8: month = 9; break;
+        case 9: month = 10; break;
+        case 10: month =11; break;
+        case 11: month =12; break;
+        }
+    switch (week){
+        case 0: month = 7; break;
+        case 1: month = 1; break;
+        case 2: month = 2; break;
+        case 3: month = 3; break;
+        case 4: month = 4; break;
+        case 5: month = 5; break;
+        case 6: month = 6; break;
+    }*/
+        document.write(year + "年" + month + "月" + day +"日"+ "&nbsp" + "星期"+ week[date.getDay()]);
+  //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+  //从数组中将成绩撮出来，然后求和取整，并输出。
+    var score = scoreStr.split(";");
+       var sum=0;
+    for (i=0;i<score.length;i++){
+        //sum+= parseInt(score[i].slice(3));
+
+         sum += parseInt(score[i].slice(score[i].indexOf(":")+1));
+    }
+document.write("-- 班级总分：",sum);
+
+</script>
+</head>
+<body>
+</body>
+</html>
